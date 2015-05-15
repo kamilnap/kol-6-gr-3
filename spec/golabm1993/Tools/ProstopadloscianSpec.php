@@ -19,8 +19,8 @@ class ProstopadloscianSpec extends ObjectBehavior
         $this->setH(56)->getH()->shouldReturn(56);
     }
     
-    function it_should_calculate_volume()
+    function it_should_calculate_pole()
     {
-        $this->setA(2)->setB(3)->setH(4)->pole()->shouldReturn(40);
+        $this->setA(2)->setB(3)->setH(4)->prostopadloscian()->shouldReturn(40);
     }
 }

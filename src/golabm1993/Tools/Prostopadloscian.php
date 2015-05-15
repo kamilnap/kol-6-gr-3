@@ -45,7 +45,7 @@ class Prostopadloscian
         return $this->h;
     }
     
-    public function pole()
+    public function prostopadloscian()
     {
         return  2 * $this->a * $this->h + 2 * $this->b * $this->h;
     }
