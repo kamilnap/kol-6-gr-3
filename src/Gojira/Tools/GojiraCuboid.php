@@ -39,6 +39,6 @@ class GojiraCuboid
 
     public function ppBocznej()
     {
-        return  2 * $this->a * $this->h + 2 * $this->b * $this->h;
+        return  2 * ($this->a * $this->h) + 2 * ($this->b * $this->h);
     }
 }
