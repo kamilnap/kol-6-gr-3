@@ -6,8 +6,9 @@ class Cuboid
 {
     private $a;
     private $b;
+    private $h;
 
-    public function setA($a)
+    public function setE($a)
     {
         $this->a = $a;
 
@@ -33,7 +34,7 @@ class Cuboid
         return $this->a * $this->h * 2 + $this->b * $this->h * 2;
     }
 
-    public function getA()
+    public function getE()
     {
         return $this->a;
     }

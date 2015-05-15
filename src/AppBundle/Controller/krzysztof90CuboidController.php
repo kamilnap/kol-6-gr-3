@@ -19,7 +19,7 @@ class krzysztof90CuboidController extends Controller
      */
     public function showFormAction()
     {
-        $prostop = new Prostop();
+        $prostop = new Cuboid();
         $form = $this->createCreateForm($prostop);
 
         return $this->render(
@@ -36,7 +36,7 @@ class krzysztof90CuboidController extends Controller
      */
     public function calculateAction(Request $request)
     {
-        $prostop = new Prostop();
+        $prostop = new Cuboid();
         $form = $this->createCreateForm($prostop);
         $form->handleRequest($request);
 
@@ -64,7 +64,7 @@ class krzysztof90CuboidController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Prostop $prostop)
+    private function createCreateForm(Cuboid $prostop)
     {
         $form = $this->createForm(new krzysztof90CuboidType(), $prostop, array(
             'action' => $this->generateUrl('krzysztof90_cuboid_licz'),

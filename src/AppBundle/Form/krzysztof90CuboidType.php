@@ -15,7 +15,7 @@ class krzysztof90CuboidType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('a')
+            ->add('e')
             ->add('b')
             ->add('h')
         ;
