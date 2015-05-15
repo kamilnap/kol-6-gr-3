@@ -27,7 +27,7 @@ class LukaszB012ProstopadloscianType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'LukaszB012\Tools\Prostopadloscian'
+            'data_class' => 'LukaszB012\Tools\LukaszB012Prostopadloscian'
         ));
     }
 

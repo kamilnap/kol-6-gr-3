@@ -19,7 +19,7 @@ class LukaszB012ProstopadloscianController extends Controller
      */
     public function showFormAction()
     {
-        $prostopadloscian = new Prostopadloscian();
+        $prostopadloscian = new LukaszB012Prostopadloscian();
         $form = $this->createCreateForm($prostopadloscian);
 
         return $this->render(
@@ -36,7 +36,7 @@ class LukaszB012ProstopadloscianController extends Controller
      */
     public function calculateAction(Request $request)
     {
-        $prostopadloscian = new Prostopadloscian();
+        $prostopadloscian = new LukaszB012Prostopadloscian();
         $form = $this->createCreateForm($prostopadloscian);
         $form->handleRequest($request);
 
@@ -60,11 +60,11 @@ class LukaszB012ProstopadloscianController extends Controller
     /**
      * Creates a form...
      *
-     * @param Prostopadloscian $prostopadloscian The object
+     * @param LukaszB012Prostopadloscian $prostopadloscian The object
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Prostopadloscian $prostopadloscian)
+    private function createCreateForm(LukaszB012Prostopadloscian $prostopadloscian)
     {
         $form = $this->createForm(new LukaszB012ProstopadloscianType(), $prostopadloscian, array(
             'action' => $this->generateUrl('LukaszB012_prostopadloscian_licz'),
