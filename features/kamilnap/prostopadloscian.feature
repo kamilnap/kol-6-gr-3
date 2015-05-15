@@ -1,4 +1,4 @@
-﻿Feature: Obliczenia
+Feature: Obliczenia
 
   Scenario: Kalkulator 2*a*h + 2*b*h
     Given I am on homepage
