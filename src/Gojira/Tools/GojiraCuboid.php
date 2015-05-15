@@ -2,49 +2,43 @@
 
 namespace Gojira\Tools;
 
-class gojiraCuboid
+class GojiraCuboid
 {
-
-
-    private $A;
-    private $B;
-    private $H;
-
-    public function setA($A)
+    private $a;
+    private $b;
+    private $h;
+    public function setA($a)
     {
-        $this->A = $A;
+        $this->a = $a;
         return $this;
     }
-
-    public function setB($B)
+    public function setB($b)
     {
-        $this->B = $B;
+        $this->b = $b;
         return $this;
     }
-
-    public function setH($H)
+    
+    public function setH($h)
     {
-        $this->H = $H;
+        $this->h = $h;
         return $this;
     }
-
     public function getA()
     {
-        return $this->A;
+        return $this->a;
     }
-
     public function getB()
     {
-        return $this->B;
+        return $this->b;
     }
     
     public function getH()
     {
-        return $this->H;
+        return $this->h;
     }
 
     public function ppBocznej()
     {
-        return 2 * $this->A * $this->H + 2 * $this->B * $this->H;
+        return  2 * $this->a * $this->h + 2 * $this->b * $this->h;
     }
 }

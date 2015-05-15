@@ -9,7 +9,7 @@ class gojiraCuboidSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Gojira\Tools\gojiraCuboid');
+        $this->shouldHaveType('Gojira\Tools\GojiraCuboid');
     }
     
     function it_should_have_setter_and_gettter()
