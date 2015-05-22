@@ -15,9 +15,9 @@ class PawloCuboidType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('a')
-            ->add('b')
-            ->add('h')
+            ->add('A')
+            ->add('B')
+            ->add('H')
         ;
     }
     

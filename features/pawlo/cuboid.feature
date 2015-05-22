@@ -1,6 +1,6 @@
 Feature: Obliczenia
 
-  Scenario: Pole powierzchi bocznej prostopadloscianu
+  Scenario: Pole powierzchi bocznej prostopadloscianu by pawlo
     Given I am on homepage
     When I follow "Pole powierzchi bocznej prostopadloscianu by pawlo"
     And I fill in "A" with "2"

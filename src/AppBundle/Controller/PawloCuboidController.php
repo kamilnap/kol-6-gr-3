@@ -13,11 +13,11 @@ use pawlo\Tools\PawloCuboid;
 class PawloCuboidController extends Controller
 {
     /**
-     * @Route("/pawlo/pawlocuboid/show/form", name="pawlo_cuboid_show_form")
+     * @Route("/pawlo/cuboid/show/form", name="pawlo_cuboid_show_form")
      */
     public function showFormAction()
     {
-        $cuboid = new Cuboid();
+        $cuboid = new PawloCuboid();
         $form = $this->createCreateForm($cuboid);
         return $this->render(
             'AppBundle:pawloCuboid:form.html.twig',
@@ -27,12 +27,12 @@ class PawloCuboidController extends Controller
         );
     }
     /**
-     * @Route("/pawlo/pawlocuboid/calc", name="pawlo_cuboid_wynik")
+     * @Route("/pawlo/cuboid/calc", name="pawlo_cuboid_wynik")
      * @Method("POST")
      */
     public function calculateAction(Request $request)
     {
-        $cuboid = new Cuboid();
+        $cuboid = new PawloCuboid();
         $form = $this->createCreateForm($cuboid);
         $form->handleRequest($request);
         if ($form->isValid()) {
@@ -55,7 +55,7 @@ class PawloCuboidController extends Controller
      *
      * @return \Symfony\Component\Form\Form The form
      */
-    private function createCreateForm(Cuboid $cuboid)
+    private function createCreateForm(PawloCuboid $cuboid)
     {
         $form = $this->createForm(new PawloCuboidType(), $cuboid, array(
             'action' => $this->generateUrl('pawlo_cuboid_wynik'),
