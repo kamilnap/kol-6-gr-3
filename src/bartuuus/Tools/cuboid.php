@@ -2,7 +2,7 @@
 
 namespace bartuuus\Tools;
 
-class cuboid
+class Cuboid
 {
 
     private $a;

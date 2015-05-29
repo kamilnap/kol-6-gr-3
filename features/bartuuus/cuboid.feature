@@ -7,4 +7,4 @@ Feature: Obliczenia pola powierzchni
     And I fill in "B" with "3"
     And I fill in "H" with "4"
     And I press "Oblicz"
-    Then I should see "Wynik wynosi: 40" 
+    Then I should see "Wynik wynosi: 40"
