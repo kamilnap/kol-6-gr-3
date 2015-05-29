@@ -4,26 +4,26 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use AppBundle\Form\Konradha9ProstopadloscianType;
-use Konradha9\Tools\Prostopadloscian;
-class Konradha9ProstopadloscianController extends Controller
+use AppBundle\Form\arypulakProstopadloscianType;
+use arypulak\Tools\Prostopadloscian;
+class arypulakProstopadloscianController extends Controller
 {
     /**
-     * @Route("/Konradha9/prostopadloscian/show/form", name="Konradha9_prostopadloscian_show_form")
+     * @Route("/arypulak/prostopadloscian/show/form", name="arypulak_prostopadloscian_show_form")
      */
     public function showFormAction()
     {
         $prostopadloscian = new Prostopadloscian();
         $form = $this->createCreateForm($prostopadloscian);
         return $this->render(
-            'AppBundle:Konradha9Prostopadloscian:form.html.twig',
+            'AppBundle:arypulakProstopadloscian:form.html.twig',
             array(
                 'form' => $form->createView()
             )
         );
     }
     /**
-     * @Route("/Konradha9/prostopadloscian/calc", name="Konradha9_prostopadloscian_licz")
+     * @Route("/arypulak/prostopadloscian/calc", name="arypulak_prostopadloscian_licz")
      * @Method("POST")
      */
     public function calculateAction(Request $request)
@@ -33,12 +33,12 @@ class Konradha9ProstopadloscianController extends Controller
         $form->handleRequest($request);
         if ($form->isValid()) {
             return $this->render(
-                'AppBundle:Konradha9Prostopadloscian:wynik.html.twig',
+                'AppBundle:arypulakProstopadloscian:wynik.html.twig',
                 array('wynik' => $prostopadloscian->prostopadloscian())
             );
         }
         return $this->render(
-            'AppBundle:Konradha9Prostopadloscian:form.html.twig',
+            'AppBundle:arypulakProstopadloscian:form.html.twig',
             array(
                 'form' => $form->createView()
             )
@@ -53,8 +53,8 @@ class Konradha9ProstopadloscianController extends Controller
      */
     private function createCreateForm(Prostopadloscian $prostopadloscian)
     {
-        $form = $this->createForm(new Konradha9ProstopadloscianType(), $prostopadloscian, array(
-            'action' => $this->generateUrl('Konradha9_prostopadloscian_licz'),
+        $form = $this->createForm(new arypulakProstopadloscianType(), $prostopadloscian, array(
+            'action' => $this->generateUrl('arypulak_prostopadloscian_licz'),
             'method' => 'POST',
         ));
         $form->add('submit', 'submit', array('label' => 'Oblicz'));

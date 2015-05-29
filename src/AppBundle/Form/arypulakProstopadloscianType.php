@@ -3,7 +3,7 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-class Konradha9ProstopadloscianType extends AbstractType
+class arypulakProstopadloscianType extends AbstractType
 {
     /**
      * @param FormBuilderInterface $builder
@@ -24,7 +24,7 @@ class Konradha9ProstopadloscianType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'Konradha9\Tools\Prostopadloscian'
+            'data_class' => 'arypulak\Tools\Prostopadloscian'
         ));
     }
     /**
@@ -32,6 +32,6 @@ class Konradha9ProstopadloscianType extends AbstractType
      */
     public function getName()
     {
-        return 'appbundle_Konradha9_prostopadloscian';
+        return 'appbundle_arypulak_prostopadloscian';
     }
 }
