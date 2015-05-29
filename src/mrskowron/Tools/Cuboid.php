@@ -4,6 +4,9 @@ namespace mrskowron\Tools;
 
 class Cuboid
 {
+    private $a;
+    private $b;
+    private $h;
 
     public function setA($a)
     {
