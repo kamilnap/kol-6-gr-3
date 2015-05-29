@@ -21,6 +21,6 @@ class CuboidSpec extends ObjectBehavior
     
     function field()
 {
-    $this->setA(3)->setB(7)->setH(4)->field()->shouldReturn(80);
+    $this->setA(7)->setB(3)->setH(4)->field()->shouldReturn(80);
 }
 }
