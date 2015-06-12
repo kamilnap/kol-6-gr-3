@@ -19,8 +19,9 @@ class ProstopadloscianSpec extends ObjectBehavior
         $this->setH(321)->getH()->shouldReturn(321);
     }
       
-    function it_should_calculate_wynik()
+    function wynik()
 {
     $this->setA(2)->setB(3)->setH(4)->wynik()->shouldReturn(40);
 }
+
 }
