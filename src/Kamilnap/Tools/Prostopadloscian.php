@@ -45,8 +45,8 @@ class Prostopadloscian
         return $this->H;
     }
     
-    function it_should_calculate_wynik()
+    public function wynik()
 {
-    $this->setA(2)->setB(3)->setH(4)->wynik()->shouldReturn(40);
+    return 2*$this->A * $this->H + 2*$this->B * $this->H;
 }
 }
